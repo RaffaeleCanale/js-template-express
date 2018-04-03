@@ -1,0 +1,37 @@
+{
+    "name": "js-template-express",
+    "version": "0.0.1",
+    "description": "Template for a Express NodeJS application transpiled with babel",
+    "repository": "github:RaffaeleCanale/js-template-express",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "node dist/index.js",
+        "build": "babel src -s -D -d dist",
+        "watch": "npm run build -- -w",
+        "dev": "nodemon -w src --exec \"npm run build && npm run start\"",
+        "debug": "node --inspect-brk dist/index.js"
+    },
+    "author": "Raffaele Canale",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.0",
+        "babel-plugin-resolver": "^1.1.0",
+        "babel-preset-es2015": "^6.24.1",
+        "eslint": "^4.18.1",
+        "eslint-config-airbnb-base": "^12.1.0",
+        "eslint-plugin-import": "^2.9.0"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "compression": "^1.7.2",
+        "cors": "^2.8.4",
+        "express": "^4.16.3",
+        "express-jwt": "^5.3.1",
+        "joi": "^13.1.2",
+        "js-utils": "git://github.com/RaffaeleCanale/js-utils.git",
+        "lodash": "^4.17.5",
+        "minimist": "^1.2.0",
+        "morgan": "^1.9.0"
+    }
+}
