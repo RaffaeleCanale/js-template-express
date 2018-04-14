@@ -18,7 +18,11 @@ const configSchema = Joi.object().required().keys({
         bodyLimit: Joi.string().default('100kb'),
         corsHeaders: Joi.array().default(['Link']),
     }),
-    secret: Joi.string().optional(),
+    auth: Joi.object().optional().keys({
+        password: Joi.string().required(),
+        secret: Joi.string().required(),
+        jwtExpiry: Joi.string().default('1h'),
+    }),
 });
 
 const { error } = Joi.validate(config, configSchema);

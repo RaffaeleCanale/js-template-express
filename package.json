@@ -23,15 +23,18 @@
         "eslint-plugin-import": "^2.9.0"
     },
     "dependencies": {
+        "bcrypt": "^1.0.3",
         "body-parser": "^1.18.2",
         "compression": "^1.7.2",
         "cors": "^2.8.4",
         "express": "^4.16.3",
+        "express-fileupload": "^0.4.0",
         "express-jwt": "^5.3.1",
+        "express-unless": "^0.5.0",
         "joi": "^13.1.2",
         "js-utils": "git://github.com/RaffaeleCanale/js-utils.git",
+        "jsonwebtoken": "^8.2.0",
         "lodash": "^4.17.5",
-        "minimist": "^1.2.0",
         "morgan": "^1.9.0"
     }
 }
