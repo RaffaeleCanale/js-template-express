@@ -7,7 +7,7 @@
     "main": "dist/index.js",
     "scripts": {
         "start": "node dist/index.js",
-        "build": "babel src -s -D -d dist",
+        "build": "mkdir -p dist && babel src -s -D -d dist",
         "watch": "npm run build -- -w",
         "dev": "nodemon -w src --exec \"npm run build && npm run start\"",
         "debug": "node --inspect-brk dist/index.js"
